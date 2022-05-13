@@ -10,6 +10,7 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  
 }
 
 
@@ -18,6 +19,12 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  var contadorLetras = 0;
+  for(var i = 0; i < string.length; i++){
+    if(string[i] === "a" || string[i] === "b" ||string[i] === "c" ||string[i] === "d" || string[i] === "f" || string[i] === "h" || string[i] === "j" || string[i] === "s"){
+      contadorLetras++;
+    }
+  }
 }
 
 
@@ -35,6 +42,16 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  str.reverse = function(){
+    var letras = [];
+    var letra = [];
+    for(i = this.length - 1; i >= 0; i--){
+      letra[0] = this[i]
+      letra.toString()
+      letras = letras + letra
+    }
+    return letras;
+  }
 } 
 
 
@@ -50,6 +67,8 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  delete(cadena["a"," b","c"]);
+  return cadena;
 }
 
 
